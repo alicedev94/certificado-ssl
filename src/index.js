@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 80;
+var morgan = require('morgan')
+
+app.use(morgan('dev'));
 
 app.get("/", (req, res) => {
   res.send("<h1>Hola Mundo, desde Node.js</h1>");
